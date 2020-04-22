@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>SORTING</title>
+</head>
+<body>
+    <select name="algo" id="algo">
+        <option value="0">Select Algorithm</option>
+        <option value="1">Bubble Sort</option>
+        <!-- <option value="2">Insertion Sort</option> -->
+        <option value="3">Selection Sort</option>
+        <!-- <option value="">Insertion Sort</option> -->
+    </select>
+    <br>
+    <input type="number" name="" id="num" value=8>
+    <button onclick="generateElements()">Generate</button>
+    <button id="sortBtn" onclick="sortElements()">SORT</button>
+    <p>Number of swaps: <span id="cnt">0</span></p>
+    <div class="arrow">
+        <img src="./assets/arrow_down.jpg" alt="" width=50 height=100>
+    </div>
+    <div class="array"></div>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/bubbleSort.js"></script>
+    <script src="./scripts/selectionSort.js"></script>
+</body>
+</html>
