@@ -1,37 +1,100 @@
+/* style.css  */
 *{
     box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    text-align: center;
+    /* display: flex; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+    background-color: #1287A5;
+    height:max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    font-size: 1.6rem;
+}
+nav .title{
+    color:#FFF;
+    font-weight: bold;
+    padding:1rem 0;
+}
+.menu{
+    padding: 5px 0;
 }
 .array{
-    height: 300px;
+    margin-top:10px;
+    height: 510px;
+    padding:2px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-around;
     position: relative;
-
 }
 .elements{
-    /* width:50px;
-    height:50px;
-    position: absolute;
-    padding: 15px;
-    transition: 0.5s;
-    text-align: center; */
-    border: 2px solid orange;
-    /* display: flex;
-    justify-content: center; */
+    background-color: #99AAAB;
+    border:0.1px solid #EEE;
+}
+.controls{
+    width:100%;
+    padding:4px;
 }
 select{
-    width:200px;
+    width:10rem;
     padding:10px;
-    background-color: rgb(184, 220, 255);
+    background-image: linear-gradient(135deg, #758AA2,rgba(40, 164, 196, 0.76));
+    border-radius: 5px;
+    outline: 0;
+    color: #FFF;
+    font-size: 0.9rem;
     cursor: pointer;
 }
 select:hover{
-    background-color: rgba(182, 219, 255, 0.6);
+    background-color: grey;
+}
+option {
+    padding:10px;
+}
+input#num{
+    width:100px;
+    padding:10px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
 }
 .arrow{
     position: absolute;
     display: none;
     z-index:-1;
+}
+button{
+    padding:10px;
+    margin:10px;
+    border-radius:10px;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 0.9rem;
+    background-image: linear-gradient(135deg, #758AA2,rgba(40, 164, 196, 0.76));
+    box-shadow: 1px 2px 5px grey;
+}
+button:active{
+    color: black;
+    background-image: linear-gradient(135deg, rgb(159, 195, 236),rgba(143, 201, 216, 0.76));
+    box-shadow: 0px 0px 2px 1px grey;
+}
+/* button:active{
+    box-shadow: 0px 0px 2px 1px grey;
+} */
+@media screen and (max-width:768px){
+    nav{
+        flex-direction: column;
+    }
 }
