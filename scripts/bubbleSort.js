@@ -1,13 +1,18 @@
 const bubbleSort=async(n)=>{
     for(i=0;i<n-1;i++){
         for(j=0;j<n-1-i;j++){
+            let promise = new Promise((resolve, reject) => {
+                setTimeout(() => resolve("done!"), 300)
+            });
+    
+            let result = await promise;
             showPicked(j,j+1);
             // console.time('swapById');
-                let promise = new Promise((resolve, reject) => {
+                promise = new Promise((resolve, reject) => {
                     setTimeout(() => resolve("done!"), 600)
                 });
 
-                let result = await promise.then(()=>swapById(j,j+1));
+                result = await promise.then(()=>swapById(j,j+1));
             // console.timeEnd('swapById');
 
                 // result=await swapById(i,j);

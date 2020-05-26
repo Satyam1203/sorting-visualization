@@ -1,13 +1,18 @@
 *{
     box-sizing: border-box;
 }
+body{
+    margin: 0;
+    text-align: center;
+}
 .array{
-    height: 300px;
+    height: 600px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    /* justify-content: space-around; */
     position: relative;
-
+    /* overflow: ; */
 }
 .elements{
     width:50px;
@@ -17,6 +22,8 @@
     transition: 0.5s;
     text-align: center;
     border: 2px solid orange;
+    /* top: 100px; */
+    left:0;
     display: flex;
     justify-content: center;
 }

@@ -28,12 +28,15 @@ const displayElements = (arr)=>{
         div.classList=['elements'];
         div.id=i;
         div.style.marginLeft=`${60*i}px`;
+        // div.style.width=`${window.innerWidth/(arr.length+5)}px`;
+        // div.style.height=`${arr[i]}px`;
         document.getElementsByClassName('array')[0].appendChild(div);
     }
 }
 
 
 const sortElements = async ()=>{
+    cnt=0;
     console.log(arr);
     document.getElementById('sortBtn').disabled=true;
     const method=document.getElementById('algo').value;
@@ -78,7 +81,7 @@ const swapById= async(i,j)=>{
             const tmp=window.getComputedStyle(b).marginLeft;
         
             let promise = new Promise((resolve, reject) => {
-                setTimeout(() => resolve("done!"), 600)
+                setTimeout(() => resolve("done!"), 400)
             });
 
             let result = await promise.then(()=>{
