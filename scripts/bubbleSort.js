@@ -3,19 +3,16 @@ const bubbleSort=async(n)=>{
         for(j=0;j<n-1-i;j++){
             showPicked(j,j+1);
             // console.time('swapById');
-                let promise = new Promise((resolve, reject) => {
-                    setTimeout(() => resolve("done!"), 600)
+                promise = new Promise((resolve, reject) => {
+                    setTimeout(() => resolve("done!"), 1000/n)
                 });
 
-                let result = await promise.then(()=>swapById(j,j+1));
+                result = await promise.then(()=>swapById(j,j+1));
             // console.timeEnd('swapById');
-
-                // result=await swapById(i,j);
                 document.getElementById('cnt').innerText=cnt;
             remPicked(j,j+1);
-            // console.log("DOne ");
         }
-    document.getElementById(n-1-i).style.border='3px solid green';
+    correctPos(n-1-i);
     }
-    document.getElementById(n-1-i).style.border='3px solid green';
+    correctPos(n-1-i);
 }
