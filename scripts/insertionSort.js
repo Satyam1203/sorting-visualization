@@ -12,6 +12,7 @@ const insertionSort=async(n)=>{
 
                 result = await promise.then(()=>{
                     swapById(j,key);
+                    document.getElementById('cnt').innerText=cnt;
                     key--;
                 })
             // }
