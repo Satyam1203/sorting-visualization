@@ -17,7 +17,7 @@ const generateElements=()=>{
     n=document.getElementById('num').value;
     if(n=="") alert("Enter number of elements to continue...");
     console.log(n);
-    for(i=0;i<n;i++) arr.push(Math.ceil(Math.random()*500));
+    for(i=0;i<n;i++) arr.push(Math.ceil(Math.random()*400));
     console.log(arr);
     displayElements(arr);
 }
@@ -30,7 +30,8 @@ const displayElements = (arr)=>{
         div.classList=['elements'];
         div.id=i;
         // div.style.marginLeft=`${60*i}px`;
-        div.style.width=`${window.innerWidth/(arr.length+5)}px`;
+        if(window.innerWidth>=1024) div.style.width=`${window.innerWidth/(2*(arr.length+5))}px`;
+        else div.style.width=`${window.innerWidth/(arr.length+5)}px`;
         div.style.height=`${arr[i]}px`;
         div.style.borderBottomLeftRadius='50px';
         div.style.borderBottomRightRadius='50px';
@@ -59,12 +60,12 @@ const swapById = async(i,j)=>{
     if(Number(a.slice(0,-2)) > Number(b.slice(0,-2))){
         cnt++;
         let promise = new Promise((resolve, reject) => {
-            setTimeout(() => resolve("done!"), 1000/n)
+            setTimeout(() => resolve("done!"), 1000/n);
         });
 
         let result = await promise.then(()=>{
             const tmp=a;
-            console.log(a,b)
+            // console.log(a,b);
             document.getElementById(i).style.height=b;
             // document.getElementById(j).id=i;
             document.getElementById(j).style.height=tmp;

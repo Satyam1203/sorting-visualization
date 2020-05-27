@@ -17,12 +17,12 @@ nav{
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
-    font-size: 1.6rem;
+    padding:0.5rem 0;
 }
 nav .title{
     color:#FFF;
     font-weight: bold;
-    padding:1rem 0;
+    font-size: 1.6rem;
 }
 .menu{
     padding: 5px 0;
@@ -32,7 +32,7 @@ nav .title{
     height: 510px;
     padding:2px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: flex-start;
     justify-content: space-around;
     position: relative;
@@ -96,5 +96,12 @@ button:active{
 @media screen and (max-width:768px){
     nav{
         flex-direction: column;
+    }
+}
+@media screen and (min-width:1024px){
+    .array{
+        width: 50%;
+        margin: auto;
+        margin-top:10px;
     }
 }
