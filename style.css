@@ -58,6 +58,9 @@ select{
 select:hover{
     background-color: grey;
 }
+select optgroup[label]{
+    padding:10px 0;
+}
 option {
     padding:10px;
 }

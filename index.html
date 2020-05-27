@@ -15,9 +15,15 @@
         <div class="menu">
             <select name="algo" id="algo">
                 <option value="0">Select Algorithm</option>
-                <option value="1">Bubble Sort</option>
-                <option value="2" selected>Insertion Sort</option>
-                <option value="3">Selection Sort</option>
+                <optgroup label="Comparison based Techniques">
+                    <option value="1">Bubble Sort</option>
+                    <option value="2" selected>Insertion Sort</option>
+                    <option value="3">Selection Sort</option>
+                </optgroup>
+                <optgroup label="Divide & Conquer Techniques">
+                    <option value="4">Quick Sort</option>
+                    <option value="5">Merge Sort</option>
+                </optgroup>
                 <!-- <option value="">Insertion Sort</option> -->
             </select>
             <input type="number" name="" id="num" value=12 placeholder="N" />
@@ -36,5 +42,6 @@
     <script src="./scripts/bubbleSort.js"></script>
     <script src="./scripts/insertionSort.js"></script>
     <script src="./scripts/selectionSort.js"></script>
+    <script src="./scripts/quickSort.js"></script>
 </body>
 </html>

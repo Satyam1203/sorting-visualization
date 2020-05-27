@@ -49,6 +49,7 @@ const sortElements = async ()=>{
     else if(method==1) bubbleSort(n);
     else if(method==2) insertionSort(n);
     else if(method==3) selectionSort(n);
+    else if(method==3) quickSort(n);
     // displayElements(arr);
 }
 
