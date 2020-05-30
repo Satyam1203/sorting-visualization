@@ -64,6 +64,9 @@ select optgroup[label]{
 option {
     padding:10px;
 }
+.swapCount{
+    display: none;
+}
 input#num{
     width:100px;
     padding:10px;

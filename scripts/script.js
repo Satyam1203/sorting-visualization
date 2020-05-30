@@ -2,6 +2,7 @@ let arr=[];
 let cnt=0;
 let n;
 let array=document.getElementsByClassName('array')[0];
+let swapDiv = document.getElementsByClassName('swapCount')[0];
 console.time('swapElements');
 
 
@@ -45,13 +46,19 @@ const sortElements = async ()=>{
     document.getElementById('sortBtn').disabled=true;
     const method=document.getElementById('algo').value;
     const n=arr.length;
+    if(method==1 || method==2 || method==3) swapDiv.style.display="block"
+    //array is not passed to the algorithms because height of elements is varied instead of swapping index
     if(method==0) alert("Please select an algorithm");   
     else if(method==1) bubbleSort(n);
     else if(method==2) insertionSort(n);
     else if(method==3) selectionSort(n);
     else if(method==4) {
         alert("For better experiencing quick sort and merge sort, try visualizing larger arrays");
-        quickSort(0,n);
+        quickSort(0,n); 
+    }
+    else if(method==5) {
+        alert("Merge sort animation not currently working");
+        mergeSort(0,n-1);
     }
     // displayElements(arr);
 }

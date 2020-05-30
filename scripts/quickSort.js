@@ -1,4 +1,6 @@
 // Using 1st element as pivot
+// We can also use last element OR random element OR median of array as pivot
+// It works on partitioning of array into two halves having smaller elements on left side and greater element on right side recursively.
 const quickSort = async (low,high)=>{
     // Partitioning the array
     if(low>=high) return;
@@ -12,7 +14,6 @@ const quickSort = async (low,high)=>{
         });
         result = await promise
 
-// console.log(document.getElementById(pos).style.height.slice(0,-2) , document.getElementById(i).style.height.slice(0,-2));
         if(Number(document.getElementById(pos).style.height.slice(0,-2)) > Number(document.getElementById(i).style.height.slice(0,-2))){
             // console.log(pos);
             // swapById(pos,i);
@@ -27,6 +28,8 @@ const quickSort = async (low,high)=>{
             document.getElementById(i).style.height = tmp;
             pos++;
         }
+        // For sorting of original array
+
         // if(arr[pos]>arr[i]){
         //     tmp=arr[pos];
         //     arr[pos]=arr[i];
