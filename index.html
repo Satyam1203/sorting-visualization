@@ -8,40 +8,55 @@
     <title>SORTING</title>
 </head>
 <body>
-    <nav>
-        <div class="title">
-            Sorting Visualizer
+    <div id="main">
+        <nav>
+            <div class="title">
+                Sorting Visualizer
+            </div>
+            <div class="menu">
+                <select name="algo" id="algo">
+                    <option value="0">Select Algorithm</option>
+                    <optgroup label="Comparison based Techniques">
+                        <option value="1">Bubble Sort</option>
+                        <option value="2">Insertion Sort</option>
+                        <option value="3">Selection Sort</option>
+                        <option value="4">Modified Bubble Sort</option>
+                    </optgroup>
+                    <optgroup label="Divide & Conquer Techniques">
+                        <option value="5">Quick Sort</option>
+                        <option value="6">Merge Sort</option>
+                    </optgroup>
+                    <!-- <option value="">Insertion Sort</option> -->
+                </select>
+                <input type="number" id="num" value=18 placeholder="Elements" inputmode="numeric" />
+            </div>
+        </nav>
+        <div class="controls">
+            <p class="custom-array" onclick="displayModal()">Enter your own array ?</p>
+            <button onclick="generateElements()">Generate</button>
+            <button id="sortBtn" onclick="sortElements()">SORT</button>
         </div>
-        <div class="menu">
-            <select name="algo" id="algo">
-                <option value="0">Select Algorithm</option>
-                <optgroup label="Comparison based Techniques">
-                    <option value="1">Bubble Sort</option>
-                    <option value="2">Insertion Sort</option>
-                    <option value="3">Selection Sort</option>
-                </optgroup>
-                <optgroup label="Divide & Conquer Techniques">
-                    <option value="4">Quick Sort</option>
-                    <option value="5">Merge Sort</option>
-                </optgroup>
-                <!-- <option value="">Insertion Sort</option> -->
-            </select>
-            <input type="number" id="num" value=18 placeholder="Elements" inputmode="numeric" />
-        </div>
-    </nav>
-    <div class="controls">
-        <button onclick="generateElements()">Generate</button>
-        <button id="sortBtn" onclick="sortElements()">SORT</button>
+        <p class="swapCount">Number of swaps: <span id="cnt">0</span></p>
+        <!-- <div class="arrow">
+            <img src="./assets/arrow_down.jpg" alt="" width=50 height=100>
+        </div> -->
+        <div class="array"></div>
     </div>
-    <p class="swapCount">Number of swaps: <span id="cnt">0</span></p>
-    <!-- <div class="arrow">
-        <img src="./assets/arrow_down.jpg" alt="" width=50 height=100>
-    </div> -->
-    <div class="array"></div>
+    <div class="modal">
+        <div class="close-modal" onclick="closeModal()">❌</div>
+        <h2>Enter your array</h2>
+        <p>eg, [43, 164, 292, 93, 362, 80]</p>
+        <div>
+            <input type="text" inputmode="numeric" id="custom-arr" />
+        </div>
+        <p style="color: rgb(34, 54, 73); font-size:12px;">* Make sure you enter array in given format <br/>(Range -> 1 to 400)</p>
+        <button onclick="addCustomElements()">Done !</button>
+    </div>
     <script src="./scripts/script.js"></script>
     <script src="./scripts/bubbleSort.js"></script>
     <script src="./scripts/insertionSort.js"></script>
     <script src="./scripts/selectionSort.js"></script>
+    <script src="./scripts/modifiedBubbleSort.js"></script>
     <script src="./scripts/quickSort.js"></script>
     <script src="./scripts/mergeSort.js"></script>
 </body>

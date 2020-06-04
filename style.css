@@ -44,6 +44,7 @@ nav .title{
 .controls{
     width:100%;
     padding:4px;
+    position: relative;
 }
 select{
     width:10rem;
@@ -74,6 +75,24 @@ input#num{
     border: 0;
     outline: 0;
 }
+.custom-array{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    background:none;
+    border:0;
+    box-shadow: none;
+    color: #1287A5;
+    display: block;
+    text-align: right;
+    outline: 0;
+    cursor: pointer;
+}
+.custom-array:active{
+    color: gray;
+    background-image:none;
+    box-shadow: none;
+}
 .arrow{
     position: absolute;
     display: none;
@@ -95,6 +114,36 @@ button:active{
     color: black;
     background-image: linear-gradient(135deg, rgb(159, 195, 236),rgba(143, 201, 216, 0.76));
     box-shadow: 0px 0px 2px 1px grey;
+}
+.modal{
+    width: 40%;
+    min-width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(40, 164, 196);
+    position: absolute;
+    z-index: 2;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(135deg, rgb(159, 227, 236),rgba(18, 77, 92, 0.76));
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s ease;
+    border-radius: 10px;
+}
+.modal>p{
+    color: rgb(73, 73, 73);
+    margin:10px;
+}
+.close-modal{
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
 }
 /* button:active{
     box-shadow: 0px 0px 2px 1px grey;

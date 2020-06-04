@@ -8,10 +8,6 @@ console.time('swapElements');
 
 const generateElements=()=>{
     cnt=0;
-    if(document.getElementById('algo').value==0){
-        alert("Please select an algorithm");
-        return;
-    }
     document.getElementById('sortBtn').disabled=false;
     arr=[];
     array.innerHTML="";
@@ -36,27 +32,32 @@ const displayElements = (arr)=>{
         div.style.height=`${arr[i]}px`;
         div.style.borderBottomLeftRadius='50px';
         div.style.borderBottomRightRadius='50px';
-        document.getElementsByClassName('array')[0].appendChild(div);
+        array.appendChild(div);
     }
 }
 
 
 const sortElements = async ()=>{
+    if(document.getElementById('algo').value==0){
+        alert("Please select an algorithm");
+        return;
+    }
     console.log(arr);
     document.getElementById('sortBtn').disabled=true;
     const method=document.getElementById('algo').value;
     const n=arr.length;
-    if(method==1 || method==2 || method==3) swapDiv.style.display="block"
+    if(method==1 || method==2 || method==3 || method==4) swapDiv.style.display="block"
     //array is not passed to the algorithms because height of elements is varied instead of swapping index
     if(method==0) alert("Please select an algorithm");   
     else if(method==1) bubbleSort(n);
     else if(method==2) insertionSort(n);
     else if(method==3) selectionSort(n);
-    else if(method==4) {
+    else if(method==4) modifiedBubbleSort(n);
+    else if(method==5) {
         alert("For better experiencing quick sort and merge sort, try visualizing larger arrays");
         quickSort(0,n); 
     }
-    else if(method==5) {
+    else if(method==6) {
         alert("Merge sort animation not currently working");
         mergeSort(0,n-1);
     }
@@ -84,6 +85,32 @@ const swapById = async(i,j)=>{
         });
     }
     
+}
+
+const displayModal = ()=>{
+    document.getElementsByClassName('modal')[0].style.opacity='1';
+    document.getElementsByClassName('modal')[0].style.pointerEvents='all';
+    document.getElementById('main').style.opacity='0.5';
+}
+
+const closeModal = () => {
+    document.getElementsByClassName('modal')[0].style.opacity='0';
+    document.getElementsByClassName('modal')[0].style.pointerEvents='none';
+    document.getElementById('main').style.opacity='1';
+}
+
+const addCustomElements = () => {
+    let a=document.getElementById('custom-arr').value;
+    acc=[];
+    console.log(typeof(a))
+    let b = a.slice(1,-1).split(',');
+    b.forEach(el=>{
+        acc.push(Number(el.trim()));
+    })
+    arr=acc;
+    array.innerHTML='';
+    closeModal();
+    displayElements(arr);
 }
 
 const correctPos = (n)=>{
