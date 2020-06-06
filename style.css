@@ -75,16 +75,22 @@ input#num{
     border: 0;
     outline: 0;
 }
+input#custom-arr{
+    padding:5px;
+    outline: 0;
+    border-radius: 5px;
+}
+span#errorMsg{
+    color: red;
+    height: 10px;
+}
 .custom-array{
-    position: absolute;
-    top:10px;
-    right: 10px;
     background:none;
     border:0;
     box-shadow: none;
     color: #1287A5;
     display: block;
-    text-align: right;
+    text-align: center;
     outline: 0;
     cursor: pointer;
 }

@@ -102,7 +102,7 @@ const closeModal = () => {
 const addCustomElements = () => {
     let a=document.getElementById('custom-arr').value;
     acc=[];
-    console.log(typeof(a))
+    // console.log(typeof(a))
     let b = a.slice(1,-1).split(',');
     b.forEach(el=>{
         acc.push(Number(el.trim()));
