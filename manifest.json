@@ -1,8 +1,15 @@
 {
     "short_name": "Sorting Visualizer",
-    "name": "Visualize sorting algorithms in web",
-    "start_url": "/",
+    "name": "Sorting Visualizer",
+    "start_url": "/index.html",
     "background_color": "#1287A5",
+    "icons": [
+        {
+          "src": "./images/surftocat-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+    ],
     "display": "standalone",
     "scope": "/",
     "theme_color": "#1287A5"   

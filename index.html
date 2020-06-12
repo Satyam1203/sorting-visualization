@@ -13,8 +13,12 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sorting visualizer">
+    <meta name="theme-color" content="#1287A5">
+    <meta name="apple-mobile-web-app-status-bar" content="#1287A5">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./images/surftocat-512x512.png">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
     <title>SORTING</title>
@@ -70,6 +74,14 @@
             (<a href="https://github.com/Satyam1203/sorting-visualization" target="_blank">Github repository</a>)
         </p>
     </footer>
+    <script>
+        if('serviceWorker' in navigator) {
+        navigator.serviceWorker
+                .register('sw.js')
+                .then(function() { console.log("Service Worker Registered"); })
+                .catch(err => console.log('Service Worker not registered', err));
+        }
+    </script>
     <script src="./scripts/script.js"></script>
     <script src="./scripts/bubbleSort.js"></script>
     <script src="./scripts/insertionSort.js"></script>
