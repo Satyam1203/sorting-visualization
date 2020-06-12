@@ -1,0 +1,9 @@
+{
+    "short_name": "Sorting Visualizer",
+    "name": "Visualize sorting algorithms in web",
+    "start_url": "/",
+    "background_color": "#1287A5",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#1287A5"   
+}

@@ -3,10 +3,12 @@ let cnt=0;
 let n;
 let array=document.getElementsByClassName('array')[0];
 let swapDiv = document.getElementsByClassName('swapCount')[0];
+let modal = document.getElementsByClassName('modal')[0];
 console.time('swapElements');
 
 
 const generateElements=()=>{
+    document.getElementsByClassName('array')[0].style.border = '1px solid grey';
     cnt=0;
     document.getElementById('sortBtn').disabled=false;
     arr=[];
@@ -99,14 +101,14 @@ const swapById = async(i,j)=>{
 }
 
 const displayModal = ()=>{
-    document.getElementsByClassName('modal')[0].style.opacity='1';
-    document.getElementsByClassName('modal')[0].style.pointerEvents='all';
+    modal.style.opacity='1';
+    modal.style.pointerEvents='all';
     document.getElementById('main').style.opacity='0.5';
 }
 
 const closeModal = () => {
-    document.getElementsByClassName('modal')[0].style.opacity='0';
-    document.getElementsByClassName('modal')[0].style.pointerEvents='none';
+    modal.style.opacity='0';
+    modal.style.pointerEvents='none';
     document.getElementById('main').style.opacity='1';
 }
 
@@ -114,7 +116,7 @@ const addCustomElements = () => {
     let a=document.getElementById('custom-arr').value;
     acc=[];
     // console.log(typeof(a))
-    let b = a.slice(1,-1).split(',');
+    let b = a.split(',');
     b.forEach(el=>{
         acc.push(Number(el.trim()));
     })

@@ -14,6 +14,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
     <title>SORTING</title>
 </head>
@@ -55,13 +57,19 @@
     <div class="modal">
         <div class="close-modal" onclick="closeModal()">❌</div>
         <h2>Enter your array</h2>
-        <p>eg, [43, 164, 292, 93, 362, 80]</p>
+        <p>eg... 43, 164, 292, 93, 362, 80</p>
         <div>
             <input type="text" id="custom-arr" />
         </div>
-        <p style="color: rgb(34, 54, 73); font-size:12px;">* Make sure you enter array in given format <br/>(Range -> 1 to 400)</p>
+        <p style="color: rgb(34, 54, 73); font-size:12px;">* Make sure you enter array in given format <br/> (Comma separated values) <br/>(Range -> 1 to 400)</p>
         <button onclick="addCustomElements()">Done !</button>
     </div>
+    <footer>
+        <p>
+            Made with ❤️ by <a href="https://github.com/Satyam1203" target="_blank">Satyam </a>. 
+            (<a href="https://github.com/Satyam1203/sorting-visualization" target="_blank">Github repository</a>)
+        </p>
+    </footer>
     <script src="./scripts/script.js"></script>
     <script src="./scripts/bubbleSort.js"></script>
     <script src="./scripts/insertionSort.js"></script>

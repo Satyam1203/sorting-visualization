@@ -5,6 +5,8 @@
     padding: 0;
 }
 body{
+    width: 100%;
+    height: 100vh;
     margin: 0;
     text-align: center;
     /* display: flex; */
@@ -28,14 +30,27 @@ nav .title{
     padding: 5px 0;
 }
 .array{
-    margin-top:10px;
-    height: 510px;
-    padding:2px;
+    margin-top:5px;
+    height: 60vh;
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
     justify-content: space-around;
     position: relative;
+    overflow-y: scroll;
+}
+.array::-webkit-scrollbar{
+    width: 5px;
+}
+.array::-webkit-scrollbar-track{
+    background: #F4F4F4;
+}
+.array::-webkit-scrollbar-thumb{
+    background: #1287A5;
+    border-radius: 10px;
+}
+.array::-webkit-scrollbar-thumb:hover{
+    background: rgb(48, 188, 223);
 }
 .elements{
     background-color: #99AAAB;
@@ -125,7 +140,7 @@ button:active{
     width: 40%;
     min-width: 300px;
     height: 250px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -151,6 +166,18 @@ button:active{
     right: 10px;
     top: 10px;
 }
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 3px 0;
+    margin: 0;
+    background-color: #aaa;
+    /* color: ; */
+}
+footer p{
+    text-align: center;
+}
 /* button:active{
     box-shadow: 0px 0px 2px 1px grey;
 } */
@@ -161,8 +188,9 @@ button:active{
 }
 @media screen and (min-width:1024px){
     .array{
+        height: 75vh;
         width: 50%;
         margin: auto;
-        margin-top:10px;
+        margin-top:5px;
     }
 }
