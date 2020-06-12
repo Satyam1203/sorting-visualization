@@ -3,11 +3,8 @@ const modifiedBubbleSort=async(n)=>{
         let tmp=cnt;
         for(j=0;j<n-1-i;j++){
             showPicked(j,j+1);
-                promise = new Promise((resolve, reject) => {
-                    setTimeout(() => resolve("done!"), 1000/n)
-                });
-
-                result = await promise.then(()=>swapById(j,j+1));
+                await wait(1500/n);
+                swapById(j,j+1)
                 document.getElementById('cnt').innerText=cnt;
             remPicked(j,j+1);
         }

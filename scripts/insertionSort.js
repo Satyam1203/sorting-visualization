@@ -3,20 +3,17 @@ const insertionSort=async(n)=>{
         let key=i+1;
         for(let j=i;j>=0;j--){
             showPicked(key,j);
-            // let a = document.getElementById(key).style.height.slice(0,-2);
-            // let b = document.getElementById(j).style.height.slice(0,-2);
-            // if(a>b){
-                let promise = new Promise((resolve, reject) => {
-                    setTimeout(() => resolve("done!"), 1000/n)
-                });
+                await wait(1500/n);    
 
-                result = await promise.then(()=>{
-                    swapById(j,key);
-                    document.getElementById('cnt').innerText=cnt;
-                    key--;
-                })
-            // }
+                swapById(j,key);
+                document.getElementById('cnt').innerText=cnt;
+                key--;
             remPicked(key,j);
+
+            // Get out of the loop when the key element reached it's correct position
+            let a = document.getElementById(key+1).style.height.slice(0,-2);
+            let b = document.getElementById(j).style.height.slice(0,-2);
+            if(Number(a)>Number(b)) break;
         }
         for(let k=0;k<=i;k++) correctPos(k);
     }

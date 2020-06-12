@@ -54,12 +54,23 @@ const sortElements = async ()=>{
     else if(method==3) selectionSort(n);
     else if(method==4) modifiedBubbleSort(n);
     else if(method==5) {
-        alert("For better experiencing quick sort and merge sort, try visualizing larger arrays");
+        if(!(localStorage.getItem('msg'))){
+            localStorage.setItem('msg', 'done');
+            alert("For better experiencing quick sort and merge sort, try visualizing larger arrays");
+        }
         quickSort(0,n); 
     }
     else if(method==6) {
-        alert("Merge sort animation not currently working");
-        mergeSort(0,n-1);
+        if(!(localStorage.getItem('msg'))){
+            localStorage.setItem('msg', 'done');
+            alert("For better experiencing quick sort and merge sort, try visualizing larger arrays");
+        }
+        await mergeSort(0,n-1);
+
+        for(i=0;i<n;i++){
+            await wait(300/n);
+            correctPos(i);
+        }
     }
     // displayElements(arr);
 }
@@ -126,6 +137,14 @@ const showPicked=(i,j)=>{
 const remPicked=(i,j)=>{
     document.getElementById(i).style.background='#99AAAB';
     document.getElementById(j).style.background='#99AAAB';
+}
+
+const wait = async (t)=>{
+    let promise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve("done!"), 1500/n)
+    });
+
+    let result = await promise;
 }
 
 

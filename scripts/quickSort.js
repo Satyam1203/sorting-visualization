@@ -9,10 +9,7 @@ const quickSort = async (low,high)=>{
 
     for(let i=low+1;i<high;i++){
         showPicked(low, i);
-        let promise = new Promise(async(resolve, reject) => {
-            setTimeout(() => resolve("done!"), 2000/n)
-        });
-        result = await promise
+        await wait(2000/n);
 
         if(Number(document.getElementById(pos).style.height.slice(0,-2)) > Number(document.getElementById(i).style.height.slice(0,-2))){
             // console.log(pos);
@@ -43,8 +40,8 @@ const quickSort = async (low,high)=>{
         remPicked(low,i);
     }
     correctPos(pos);
-    quickSort(low,pos);
-    quickSort(pos+1,high);
+    await quickSort(low,pos);
+    await quickSort(pos+1,high);
     // Debugging 
 
     // let ap=[]
