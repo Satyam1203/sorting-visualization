@@ -1,6 +1,6 @@
 {
     "short_name": "Sorting Visualizer",
-    "name": "Sorting Visualizer",
+    "name": "Visualize Sorting Algorithms",
     "start_url": "/index.html",
     "background_color": "#1287A5",
     "icons": [

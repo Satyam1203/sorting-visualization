@@ -8,7 +8,7 @@ console.time('swapElements');
 
 
 const generateElements=()=>{
-    document.getElementsByClassName('array')[0].style.border = '1px solid grey';
+    array.style.border = '1px solid grey';
     cnt=0;
     document.getElementById('sortBtn').disabled=false;
     arr=[];
@@ -101,6 +101,7 @@ const swapById = async(i,j)=>{
 }
 
 const displayModal = ()=>{
+    modal.style.transition = 'all 1s ease';
     modal.style.opacity='1';
     modal.style.pointerEvents='all';
     document.getElementById('main').style.opacity='0.5';
@@ -113,17 +114,21 @@ const closeModal = () => {
 }
 
 const addCustomElements = () => {
-    let a=document.getElementById('custom-arr').value;
+    let a=document.getElementById('custom-arr');
     acc=[];
     // console.log(typeof(a))
-    let b = a.split(',');
+    let b = a.value.split(',');
     b.forEach(el=>{
         acc.push(Number(el.trim()));
     })
     arr=acc;
     array.innerHTML='';
     closeModal();
+    array.style.border = '1px solid grey';
     displayElements(arr);
+    a.value = '';
+    cnt=0;
+    document.getElementById('sortBtn').disabled = false;
 }
 
 const correctPos = (n)=>{

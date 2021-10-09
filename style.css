@@ -63,7 +63,7 @@ nav .title{
 }
 select{
     width:10rem;
-    padding:10px;
+    padding:8px 10px;
     background-image: linear-gradient(135deg, #758AA2,rgba(40, 164, 196, 0.76));
     border-radius: 5px;
     outline: 0;
@@ -100,16 +100,22 @@ span#errorMsg{
     height: 10px;
 }
 .custom-array{
+    width: 100%;
+    text-align: center;
+}
+.custom-array>button{
     background:none;
     border:0;
     box-shadow: none;
     color: #1287A5;
-    display: block;
-    text-align: center;
+    display: inline;
+    padding:0;
     outline: 0;
     cursor: pointer;
+    margin:0;
+    font-size: 1rem;
 }
-.custom-array:active{
+.custom-array>button:active{
     color: gray;
     background-image:none;
     box-shadow: none;
@@ -122,6 +128,7 @@ span#errorMsg{
 button{
     padding:10px;
     margin:10px;
+    margin-bottom: 2px;
     border-radius:10px;
     border:none;
     outline: none;
@@ -140,20 +147,20 @@ button:active{
     width: 40%;
     min-width: 300px;
     height: 250px;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 1px solid rgba(40, 164, 196);
     position: absolute;
     z-index: 2;
+    margin:auto;
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
     background-image: linear-gradient(135deg, rgb(159, 227, 236),rgba(18, 77, 92, 0.76));
     opacity: 0;
     pointer-events: none;
-    transition: all 1s ease;
     border-radius: 10px;
 }
 .modal>p{

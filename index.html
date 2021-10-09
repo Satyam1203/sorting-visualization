@@ -10,6 +10,7 @@
 
     gtag('config', 'UA-158644980-1');
     </script>
+    <meta name="google-site-verification" content="uhUyM3TEfd0BDXlEWA7d-qMrpnSEd2Hrgdk6zqH37kE" />
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +49,9 @@
             </div>
         </nav>
         <div class="controls">
-            <p class="custom-array" onclick="displayModal()">Enter your own array ?</p>
+            <p class="custom-array">
+                <button onclick="displayModal()">Enter your own array ?</button>
+            </p>
             <button onclick="generateElements()">Generate</button>
             <button id="sortBtn" onclick="sortElements()">SORT</button>
         </div>
@@ -63,7 +66,7 @@
         <h2>Enter your array</h2>
         <p>eg... 43, 164, 292, 93, 362, 80</p>
         <div>
-            <input type="text" id="custom-arr" />
+            <input type="text" id="custom-arr" inputmode="numeric"/>
         </div>
         <p style="color: rgb(34, 54, 73); font-size:12px;">* Make sure you enter array in given format <br/> (Comma separated values) <br/>(Range -> 1 to 400)</p>
         <button onclick="addCustomElements()">Done !</button>
